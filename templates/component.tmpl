@@ -1,0 +1,8 @@
+<html>
+  <a id="{{ .id }}">
+    {{ .task }}
+    <button hx-post="/remove" hx-target="#{{ .id }}" hx-swap="outerHTML" hx-vals='{"taskId": "{{ .id }}"}'> 
+      Remove to-do
+    </button>
+  </a>
+</html>
